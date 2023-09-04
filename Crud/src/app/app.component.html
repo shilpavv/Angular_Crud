@@ -1,0 +1,14 @@
+<header class="navbar" *ngIf="shouldShowNavbar()">
+  <nav class="d-flex justify-content-between align-items-center">
+    <ul class="nav-list d-flex align-items-center">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/employee">Employee</a></li>
+    </ul>
+    <ul class="nav-list d-flex align-items-center right">
+      <li><a (click)="logout()">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

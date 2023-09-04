@@ -1,0 +1,68 @@
+<div class="card-body">
+  <div class="d-flex justify-content-between align-items-center mt-3 px-3">
+    <div class="mb-0 justify-content-start">
+      <h2>Employee List</h2>
+    </div>
+    <button class="btn btn-success justify-content-between align-items-center mt-3 px-3  " (click)="openModal()">
+      <i class="fas fa-plus"></i> Add
+    </button>
+  </div>
+<!-- Modal for adding employees -->
+  <div class=" mt-3 px-3">
+    <!-- Table card -->
+    <div class="card">
+      <div class="card-body ">
+        <table class="table  " id="employeelist">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>DOB</th>
+              <th>Email</th>
+              <th>Mobile No</th>
+              <th>Gender</th>
+              <th>Department</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of employeeList;  index as i">
+              <td>{{employee.id }}</td>
+              <td>{{ employee.name }}</td>
+              <td>{{ employee.age }}</td>
+              <td>{{employee.dob }}</td>
+              <td>{{ employee.email }}</td>
+              <td>{{ employee.mob }}</td>
+              <td>{{ employee.gender }}</td>
+              <td>{{ employee.department }}</td>
+              <td>
+                <div>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    (click)="openModal(employee.id)"
+                  >
+                    Edit
+                  </button>
+
+                  <button class="btn btn-danger btn-sm ms-1" (click)="deleteEmployee(employee)">
+                    Delete
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div *ngIf="isDeleting" class="d-flex justify-content-center align-items-center mt-3">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div *ngIf="employeeList.length === 0 && !isDeleting" class="text-center mt-4">
+          No employee found.
+        </div>
+      </div>
+      </div>
+      <!-- End of Table card -->
+    </div>
+</div>

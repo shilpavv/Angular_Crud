@@ -1,0 +1,57 @@
+{
+  "Users": [
+    {
+      "name": "shilpa",
+      "email": "admin@gmail.com",
+      "mobile": "9846465745",
+      "password": "123456789",
+      "id": 1
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "mobile": "9567556644",
+      "password": "12345",
+      "id": 2
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "shilpa ",
+      "age": 25,
+      "dob": "2023-08-13",
+      "email": "admin@gmail.com",
+      "mob": 12345678,
+      "gender": "Female",
+      "department": "Sales"
+    },
+    {
+      "id": 2,
+      "name": "sai",
+      "age": 29,
+      "dob": "2023-09-01",
+      "email": "admin@gmail.com",
+      "mob": 1234567,
+      "gender": "Male",
+      "department": "HR"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

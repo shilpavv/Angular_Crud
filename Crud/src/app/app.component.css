@@ -1,0 +1,30 @@
+
+.navbar {
+  background-color:#45B39D ;
+  padding: 10px 0;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  margin-right:1100px;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-list li a:hover {
+  color: black;
+}
+.custom-logout {
+  margin-right: 50px; 
+}
